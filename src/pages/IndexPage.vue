@@ -70,7 +70,7 @@ const badgeEmoji = computed(() => (thanks.value ? '💐' : '🥺'));
 const subtitleText = computed(() =>
   thanks.value
     ? 'หายแล้วอย่างอนอีกนะ  🌸'
-    : 'เปิดเข้ามาแล้ว อยากให้ง้อด้วยดอกไม้สวย ๆ ให้หายงอนนะ 🌸',
+    : 'เปิดเข้ามาแล้ว อยากให้ง้อด้วยดอกไม้สวย ๆแบบที่แกชอบ ให้หายงอนนะ 🌸',
 );
 const text = computed(() =>
   thanks.value ? 'ดีใจที่แกหายงอนแล้วนะ น่ารักมากเลย  💖' : 'ขอโทษค้าบ ง้อได้มั้ยค้าบ 🥺',
@@ -112,8 +112,8 @@ function showThanks() {
 
 .hero-shell {
   max-width: 720px;
-  width: 100%;
-  padding: 3rem 2.5rem;
+  width: min(92%, 560px);
+  padding: 3rem 2rem;
   border-radius: 42px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 30px 80px rgba(215, 95, 165, 0.18);
@@ -145,19 +145,23 @@ function showThanks() {
 
 .hero-title {
   margin: 0;
-  font-size: 40px;
-  line-height: 1.04;
+  font-family: 'Satisfy', 'Baloo 2', cursive;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  line-height: 1.02;
   color: #6a2e5f;
   letter-spacing: -0.04em;
+  text-shadow: 0 4px 12px rgba(211, 125, 164, 0.18);
   animation: floatText 5.5s ease-in-out infinite;
 }
 
 .hero-subtitle {
   margin: 1.5rem auto 1.5rem;
   max-width: 560px;
-  font-size: 1.2rem;
+  font-family: 'Baloo 2', 'Nunito', sans-serif;
+  font-size: 1.22rem;
   color: #7f5377;
-  line-height: 1.8;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
 }
 
 .hero-message {
@@ -185,8 +189,9 @@ function showThanks() {
 }
 
 .hero-btn {
-  min-width: 200px;
-  padding: 0.95rem 1.7rem;
+  min-width: 180px;
+  padding: 0.95rem 1.5rem;
+  font-family: 'Baloo 2', 'Nunito', sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
   border-radius: 999px;
@@ -382,6 +387,54 @@ function showThanks() {
   50% {
     transform: translateY(-18px);
     opacity: 0.6;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-page {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .hero-shell {
+    padding: 2rem 1.2rem;
+    border-radius: 32px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .button-row {
+    gap: 0.75rem;
+  }
+
+  .hero-btn {
+    min-width: 150px;
+    width: 100%;
+    padding: 0.85rem 1rem;
+  }
+
+  .hero-badge {
+    width: 118px;
+    height: 118px;
+    font-size: 3.3rem;
+  }
+
+  .flower {
+    width: 22px;
+    height: 22px;
+  }
+
+  .bubble-1,
+  .bubble-2,
+  .bubble-3 {
+    width: 18px;
+    height: 18px;
   }
 }
 
