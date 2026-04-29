@@ -73,7 +73,7 @@ const subtitleText = computed(() =>
     : 'เปิดเข้ามาแล้ว อยากให้ง้อด้วยดอกไม้สวย ๆแบบที่แกชอบ ให้หายงอนนะ 🌸',
 );
 const text = computed(() =>
-  thanks.value ? 'ดีใจที่แกหายงอนแล้วนะ น่ารักมากเลย  💖' : 'ขอโทษค้าบ ง้อได้มั้ยค้าบ 🥺',
+  thanks.value ? 'ดีใจที่แกหายงอนแล้วนะ\n น่ารักมากเลย 💖' : 'ขอโทษค้าบ\nง้อได้มั้ยค้าบ 🥺',
 );
 
 const notAngryMessage = computed(() => {
@@ -82,7 +82,7 @@ const notAngryMessage = computed(() => {
     'ยิ้มให้หน่อยนะ หายงอนนะ 🌼',
     'งอนไม่ลงแล้วแหละ 😅',
     'หายงอนนะคับ 😌',
-    'ครั้งสุดท้ายแล้วนะ ปุ่มจะหายไปแล้ว... 🌷',
+    'ปฏิเสธไม่ได้แล้วนะะคับ 🥰',
   ];
   return messages[Math.min(notAngryCount.value - 1, messages.length - 1)];
 });
@@ -147,7 +147,8 @@ function showThanks() {
   margin: 0;
   font-family: 'Satisfy', 'Baloo 2', cursive;
   font-size: clamp(2.4rem, 4vw, 3.6rem);
-  line-height: 1.02;
+  line-height: 1.15;
+  white-space: pre-wrap;
   color: #6a2e5f;
   letter-spacing: -0.04em;
   text-shadow: 0 4px 12px rgba(211, 125, 164, 0.18);
