@@ -1,0 +1,19 @@
+// app global css
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fff1fb 0%, #ffe7f3 50%, #ffd6ed 100%);
+  color: #4a2a51;
+  font-family: 'Baloo 2', 'Comic Sans MS', 'Segoe UI', sans-serif;
+}
+
+#q-app {
+  min-height: 100vh;
+  font-family: inherit;
+}
